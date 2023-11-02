@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta e links para o arquivo de estilo (style.css) -->
+    <!-- ... (código anterior) ... -->
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #ffe6e6;
+        /* Cor de creme de morango */
+        color: #ff66b2;
+        /* Rosa */
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #ff66b2;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        
+    }
+
+    header h1 {
+        font-size: 2em;
+        font-style: inherit;
+    }
+
+    nav ul {
+        list-style: none;
+    }
+
+    nav li {
+        display: inline;
+        margin: 0 20px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .hero p {
+        color: #ff66b2;
+    }
+
+    .hero {
+        background-image: url('coffee-shop.jpg');
+        /* Adicione a imagem de fundo desejada */
+        background-size: cover;
+        text-align: center;
+        padding: 100px 0;
+        color: #fff;
+
+    }
+
+    .hero h2 {
+        font-size: 2.5em;
+        color: #ff66b2;
+
+    }
+
+    .btn {
+        display: inline-block;
+        background-color: #ff66b2;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        margin-top: 20px;
+    }
+
+    .menu {
+        text-align: center;
+        padding: 50px 0;
+    }
+
+    .menu h2 {
+        font-size: 2em;
+    }
+
+    .menu-item {
+        display: inline-block;
+        margin: 50px;
+    }
+
+    .menu-item img {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    .price {
+        display: block;
+        font-weight: bold;
+        color: #ff66b2;
+    }
+
+    .about {
+        text-align: center;
+        padding: 50px 0;
+    }
+
+    .contact {
+        text-align: center;
+        background-color: #ff66b2;
+        color: #fff;
+        padding: 50px 0;
+    }
+
+    .contact p {
+        font-size: 1.2em;
+
+    }
+
+    footer {
+        background-color: #ff66b2;
+        text-align: center;
+        color: #fff;
+        padding: 10px 0;
+    }
+
+    /* Estilize outros elementos conforme necessário */
+</style>
+
+<body>
+    <header>
+        <!-- Cabeçalho com botão "Voltar" para retornar à página inicial -->
+        <a href="D:\Caramello Coffee\index.html" class="btn">Inicio</a>
+    </header>
+
+    <section class="menu">
+        <!-- Replicação da seção de cardápio com os mesmos itens -->
+        <!-- ... (mesma seção de cardápio com os mesmos itens) ... -->
+    </section>
+
+    <!-- ... (rodapé) ... -->
+    <section class="menu" >
+        <!-- Seção de cardápio expandida com mais itens -->
+        <h2>Cardápio</h2>
+        <div class="menu-item">
+            <img src="D:\Caramello Coffee\imagens\images.jfif" alt="Café Expresso">
+            <h3>Café Expresso</h3>
+            <p>Um café encorpado com um sabor intenso.</p>
+            <span class="price">   <input type="checkbox" name="item" value="5.00"> <!-- Adicione valor do item como valor do checkbox -->R$ 5,00</span>
+        </div>
+        <div class="menu-item">
+            <img src="D:\Caramello Coffee\imagens\torta.jfif" alt="Torta de Morango">
+            <h3>Torta de Morango</h3>
+            <p>Uma sobremesa irresistível com creme de morango.</p>
+            <span class="price">   <input type="checkbox" name="item" value="7.00"> <!-- Adicione valor do item como valor do checkbox -->R$ 7,00</span>
+        </div>
+        <div class="menu-item">
+            <img src="D:\Caramello Coffee\imagens\latte.jfif" alt="Café Latte">
+            <h3>Café Latte</h3>
+            <p>Uma mistura suave de café expresso e leite vaporizado.</p>
+            <span class="price">   <input type="checkbox" name="item" value="6.00"> <!-- Adicione valor do item como valor do checkbox -->R$ 6,00</span>
+        </div>
+        <div class="menu-item">
+            <img src="D:\Caramello Coffee\imagens\croaca.jfif" alt="Croissant de Chocolate">
+            <h3>Croissant de Chocolate</h3>
+            <p>Um croissant macio e amanteigado recheado com chocolate.</p>
+            <span class="price">   <input type="checkbox" name="item" class="custom-checkbox" value="4.50"> <!-- Adicione valor do item como valor do checkbox -->R$ 4,50</span>
+        </div>
+        <div class="menu-item">
+            <img src="D:\Caramello Coffee\imagens\caputino.jfif" alt="Cappuccino">
+            <h3>Cappuccino</h3>
+            <p>Uma deliciosa mistura de café, leite e espuma de leite.</p>
+            <span  class="price">   <input type="checkbox" name="item" value="6.50"> <!-- Adicione valor do item como valor do checkbox -->R$ 6,50 </span>
+        </div>
+        <div class="menu-item">
+            <img src="D:\Caramello Coffee\imagens\brounie.jfif" alt="Brownie de Chocolate">
+            <h3>Brownie de Chocolate</h3>
+            <p>Um brownie rico em chocolate com pedaços de nozes.</p>
+            <span class="price">   <div class="checkbox">
+                <input type="checkbox" id="subscribe" checked>
+                <label for="subscribe"></label>
+            </div> <!-- Adicione valor do item como valor do checkbox -->R$ 4,00</span></div>
+
+    
+                <!-- Adicione caixas de seleção para outros itens de menu -->
+
+                <div class="total">
+                    Total a Pagar: <span id="total-amount">R$ 0.00</span>
+                </div>
+
+                <button type="button" id="checkout-button" class="btn">Avançar</button>
+            </form>
+    </section>
+
+    <section class="payment-options">
+        <h2>Opções de Pagamento</h2>
+        <input type="radio" name="payment" value="PIX">PIX
+        <input type="radio" name="payment" value="dinheiro">Dinheiro
+    </section>
+    
+
+    </div>
+    </div>
+
+</body>
+
+</html>
