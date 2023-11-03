@@ -68,7 +68,12 @@
     .menu-item {
         display: inline-block;
         margin: 20px;
+     flex: 1;
+        padding: 20px;
     }
+.container{
+    display:flex;
+}
 
     .menu-item img {
         max-width: 100%;
@@ -119,6 +124,7 @@
 
     <section class="menu">
         <h2>Favoritos da Galera</h2>
+        <div class="container">
         <div class="menu-item">
             <img src="imagens\images.jfif" alt="Café Expresso">
             <h3>Café Expresso</h3>
@@ -130,6 +136,7 @@
             <h3>Torta de Morango</h3>
             <p>Uma sobremesa irresistível com creme de morango.</p>
             <span class="price">R$ 7,00</span>
+        </div>
         </div>
     </section>
 
