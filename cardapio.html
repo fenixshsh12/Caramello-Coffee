@@ -182,24 +182,36 @@
 </center>
 </body>
 
-    <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const checkoutButton = document.getElementById("checkout-button");
+   <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const checkoutButton = document.getElementById("checkout-button");
+            const itemPrices = document.querySelectorAll(".item-price");
+            const totalElement = document.getElementById("total");
 
-    checkoutButton.addEventListener("click", function () {
-      const itemPrices = document.querySelectorAll(".item-price");
-      let total = 0;
+            function updateTotal() {
+                let total = 0;
 
-      itemPrices.forEach((item) => {
-        const priceText = item.textContent;
-        const priceValue = parseFloat(priceText.replace("R$ ", "").replace(",", "."));
-        total += priceValue;
-      });
+                itemPrices.forEach((item) => {
+                    const priceText = item.textContent;
+                    const priceValue = parseFloat(priceText.replace("R$ ", "").replace(",", "."));
 
-      // Redirecione para a outra página, passando o total como parâmetro
-      window.location.href = "outra-pagina.html?total=" + total.toFixed(2);
-    });
-  });
-</script>
+                    if (item.previousElementSibling.checked) {
+                        total += priceValue;
+                    }
+                });
+
+                totalElement.textContent = "Total: R$ " + total.toFixed(2);
+            }
+
+            itemPrices.forEach((item) => {
+                item.previousElementSibling.addEventListener("change", updateTotal);
+            });
+
+            checkoutButton.addEventListener("click", function () {
+                // Redirecione para a outra página, passando o total como parâmetro
+                window.location.href = "outra-pagina.html?total=" + totalElement.textContent.replace("Total: R$ ", "");
+            });
+        });
+    </script>
 
 </html>
