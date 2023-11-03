@@ -186,16 +186,17 @@
         document.addEventListener("DOMContentLoaded", function () {
             const checkoutButton = document.getElementById("checkout-button");
             const itemPrices = document.querySelectorAll(".item-price");
+            const checkboxes = document.querySelectorAll("input[type='checkbox']");
             const totalElement = document.getElementById("total");
 
             function updateTotal() {
                 let total = 0;
 
-                itemPrices.forEach((item) => {
+                itemPrices.forEach((item, index) => {
                     const priceText = item.textContent;
                     const priceValue = parseFloat(priceText.replace("R$ ", "").replace(",", "."));
 
-                    if (item.previousElementSibling.checked) {
+                    if (checkboxes[index].checked) {
                         total += priceValue;
                     }
                 });
@@ -203,8 +204,8 @@
                 totalElement.textContent = "Total: R$ " + total.toFixed(2);
             }
 
-            itemPrices.forEach((item) => {
-                item.previousElementSibling.addEventListener("change", updateTotal);
+            checkboxes.forEach((checkbox) => {
+                checkbox.addEventListener("change", updateTotal);
             });
 
             checkoutButton.addEventListener("click", function () {
@@ -213,5 +214,4 @@
             });
         });
     </script>
-
 </html>
