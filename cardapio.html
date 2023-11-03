@@ -126,7 +126,6 @@
 
     /* Estilize outros elementos conforme necessário */
 </style>
-
 <body>
     <center>
     <header>
@@ -182,5 +181,25 @@
     </div>
 </center>
 </body>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const checkoutButton = document.getElementById("checkout-button");
+
+    checkoutButton.addEventListener("click", function () {
+      const itemPrices = document.querySelectorAll(".item-price");
+      let total = 0;
+
+      itemPrices.forEach((item) => {
+        const priceText = item.textContent;
+        const priceValue = parseFloat(priceText.replace("R$ ", "").replace(",", "."));
+        total += priceValue;
+      });
+
+      // Redirecione para a outra página, passando o total como parâmetro
+      window.location.href = "outra-pagina.html?total=" + total.toFixed(2);
+    });
+  });
+</script>
 
 </html>
