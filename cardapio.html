@@ -21,7 +21,7 @@
         color: #fff;
         text-align: center;
         padding: 10px 0;
-        
+
     }
 
     header h1 {
@@ -68,11 +68,11 @@
         display: inline-block;
         background-color: #ff66b2;
         color: #fff;
-        padding: 10px ;
+        padding: 10px;
         border-radius: 5px;
         text-decoration: none;
         margin-top: 20px;
-        
+
     }
 
     .menu {
@@ -86,13 +86,17 @@
 
     .menu-item {
         display: inline-block;
-        margin: 50px;
-        flex: 1;
-        padding: 20px;
+        width: 32%;
+        padding: 2%;
+        box-sizing: border-box;
     }
-.container{
-    display:flex;
-}
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
     .menu-item img {
         max-width: 100%;
         border-radius: 10px;
@@ -127,102 +131,112 @@
         color: #fff;
         padding: 10px 0;
     }
-@media (max-width:768px){
-    .container{
-        flex-direction:column;
-        align-itens:center;
+
+    @media (max-width:768px) {
+        .container {
+            flex-direction: column;
+            align-items: center;
+        }
     }
-}
+
     /* Estilize outros elementos conforme necessário */
 </style>
+
 <body>
     <center>
-    <header>
-        <!-- Cabeçalho com botão "Voltar" para retornar à página inicial -->
-        <a href="index.html" class="btn">Inicio</a>
-    </header>
+        <header>
+            <!-- Cabeçalho com botão "Voltar" para retornar à página inicial -->
+            <a href="index.html" class="btn">Inicio</a>
+        </header>
         <h2>Cardápio</h2>
         <div class="container">
             <div class="menu-item">
-            <img src="imagens\images.jfif" alt="Café Expresso">
-            <h3>Café Expresso</h3>
-            <p>Um café encorpado com um sabor intenso.</p>
-            <span class="price item-price">   <input type="checkbox" name="item" value="5.00"> <!-- Adicione valor do item como valor do checkbox -->R$ 5,00</span>
-        </div>
-        <div class="menu-item">
-            <img src="imagens\torta.jfif" alt="Torta de Morango">
-            <h3>Torta de Morango</h3>
-            <p>Uma sobremesa irresistível com creme de morango.</p>
-            <span class="price item-price">   <input type="checkbox" name="item" value="7.00"> <!-- Adicione valor do item como valor do checkbox -->R$ 7,00</span>
-        </div>
-        <div class="menu-item">
-            <img src="imagens\latte.jfif" alt="Café Latte">
-            <h3>Café Latte</h3>
-            <p>Uma mistura suave de café expresso e leite vaporizado.</p>
-            <span class="price item-price">   <input type="checkbox" name="item" value="6.00"> <!-- Adicione valor do item como valor do checkbox -->R$ 6,00</span>
-        </div>
-        <div class="menu-item">
-            <img src="imagens\croaca.jfif" alt="Croissant de Chocolate">
-            <h3>Croissant de Chocolate</h3>
-            <p>Um croissant macio e amanteigado recheado com chocolate.</p>
-            <span class="price item-price">   <input type="checkbox" name="item" class="custom-checkbox" value="4.50"> <!-- Adicione valor do item como valor do checkbox -->R$ 4,50</span>
-        </div>
-        <div class="menu-item">
-            <img src="imagens\caputino.jfif" alt="Cappuccino">
-            <h3>Cappuccino</h3>
-            <p>Uma deliciosa mistura de café, leite e espuma de leite.</p>
-            <span  class="price item-price">   <input type="checkbox" name="item" value="6.50"> <!-- Adicione valor do item como valor do checkbox -->R$ 6,50 </span>
-        </div>
-        <div class="menu-item">
-            <img src="imagens\brounie.jfif" alt="Brownie de Chocolate">
-            <h3>Brownie de Chocolate</h3>
-            <p>Um brownie rico em chocolate com pedaços de nozes.</p>
-            <span class="price item-price">   <input type="checkbox" name="item" value="4.00"> <!-- Adicione valor do item como valor do checkbox -->R$ 4,00</span>
-    </div>
+                <img src="imagens\images.jfif" alt="Café Expresso">
+                <h3>Café Expresso</h3>
+                <p>Um café encorpado com um sabor intenso.</p>
+                <span class="price item-price"> <input type="checkbox" name="item" value="5.00">
+                    <!-- Adicione valor do item como valor do checkbox -->R$ 5,00</span>
+            </div>
+            <div class="menu-item">
+                <img src="imagens\torta.jfif" alt="Torta de Morango">
+                <h3>Torta de Morango</h3>
+                <p>Uma sobremesa irresistível com creme de morango.</p>
+                <span class="price item-price"> <input type="checkbox" name="item" value="7.00">
+                    <!-- Adicione valor do item como valor do checkbox -->R$ 7,00</span>
+            </div>
+            <div class="menu-item">
+                <img src="imagens\latte.jfif" alt="Café Latte">
+                <h3>Café Latte</h3>
+                <p>Uma mistura suave de café expresso e leite vaporizado.</p>
+                <span class="price item-price"> <input type="checkbox" name="item" value="6.00">
+                    <!-- Adicione valor do item como valor do checkbox -->R$ 6,00</span>
+            </div>
+            <div class="menu-item">
+                <img src="imagens\croaca.jfif" alt="Croissant de Chocolate">
+                <h3>Croissant de Chocolate</h3>
+                <p>Um croissant macio e amanteigado recheado com chocolate.</p>
+                <span class="price item-price"> <input type="checkbox" name="item" class="custom-checkbox" value="4.50">
+                    <!-- Adicione valor do item como valor do checkbox -->R$ 4,50</span>
+            </div>
+            <div class="menu-item">
+                <img src="imagens\caputino.jfif" alt="Cappuccino">
+                <h3>Cappuccino</h3>
+                <p>Uma deliciosa mistura de café, leite e espuma de leite.</p>
+                <span class="price item-price"> <input type="checkbox" name="item" value="6.50">
+                    <!-- Adicione valor do item como valor do checkbox -->R$ 6,50 </span>
+            </div>
+            <div class="menu-item">
+                <img src="imagens\brounie.jfif" alt="Brownie de Chocolate">
+                <h3>Brownie de Chocolate</h3>
+                <p>Um brownie rico em chocolate com pedaços de nozes.</p>
+                <span class="price item-price"> <input type="checkbox" name="item" value="4.00">
+                    <!-- Adicione valor do item como valor do checkbox -->R$ 4,00</span>
+            </div>
         </div>
         <div id="total">Total: R$ 0.00</div>
-     <center>               
-             <form>
+        <center>
+            <form>
                 <button type="button" id="checkout-button" class="btn">Finalizar Compra</button>
             </form>
-    </center>
+        </center>
 
-    </section>
-    </div>
-    </div>
-</center>
+        </section>
+        </div>
+        </div>
+    </center>
 </body>
 
-   <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const checkoutButton = document.getElementById("checkout-button");
-            const itemPrices = document.querySelectorAll(".item-price");
-            const checkboxes = document.querySelectorAll("input[type='checkbox']");
-            const totalElement = document.getElementById("total");
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const checkoutButton = document.getElementById("checkout-button");
+        const itemPrices = document.querySelectorAll(".item-price");
+        const checkboxes = document.querySelectorAll("input[type='checkbox']");
+        const totalElement = document.getElementById("total");
 
-            function updateTotal() {
-                let total = 0;
+        function updateTotal() {
+            let total = 0;
 
-                itemPrices.forEach((item, index) => {
-                    const priceText = item.textContent;
-                    const priceValue = parseFloat(priceText.replace("R$ ", "").replace(",", "."));
+            itemPrices.forEach((item, index) => {
+                const priceText = item.textContent;
+                const priceValue = parseFloat(priceText.replace("R$ ", "").replace(",", "."));
 
-                    if (checkboxes[index].checked) {
-                        total += priceValue;
-                    }
-                });
-
-                totalElement.textContent = "Total: R$ " + total.toFixed(2);
-            }
-
-            checkboxes.forEach((checkbox) => {
-                checkbox.addEventListener("change", updateTotal);
+                if (checkboxes[index].checked) {
+                    total += priceValue;
+                }
             });
 
-            checkoutButton.addEventListener("click", function () {
-                // Redirecione para a outra página, passando o total como parâmetro
-                 window.location.href = "compra.html?total=" + totalElement.textContent.replace("Total: R$ ", "");
-            });
+            totalElement.textContent = "Total: R$ " + total.toFixed(2);
+        }
+
+        checkboxes.forEach((checkbox) => {
+            checkbox.addEventListener("change", updateTotal);
         });
-    </script>
+
+        checkoutButton.addEventListener("click", function () {
+            // Redirecione para a outra página, passando o total como parâmetro
+            window.location.href = "compra.html + totalElement.textContent.replace("total:R$");
+        });
+    });
+</script>
+
 </html>
