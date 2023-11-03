@@ -2,10 +2,144 @@
 <html lang="en">
 
 <head>
-    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalização da Compra</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6e6;
+            /* Cor de creme de morango */
+            color: #ff66b2;
+            /* Rosa */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ff66b2;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        header h1 {
+            font-size: 2em;
+        }
+
+        .confirmation {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .confirmation h2 {
+            font-size: 2em;
+        }
+
+        .total {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .payment-options {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .payment-options a {
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            background-color: #ff66b2;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .payment-info {
+            display: none;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .show-info {
+            display: block;
+        }
+
+        input[type="text"],
+        button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        button {
+            background-color: #ff66b2;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
-    
+    <header>
+        <h1>Seu Restaurante</h1>
+    </header>
+
+    <div class="confirmation">
+        <h2>Quase Lá!</h2>
+        <p>Obrigado por escolher nossos produtos.</p>
+        <p class="total">Total da compra: R$
+            <?php echo $_GET['total']; ?>
+        </p>
+    </div>
+
+    <div class="payment-options">
+        <a href="javascript:void(0);" class="payment-option">Pagar com Pix</a>
+        <div class="payment-info">
+            <p>Chave Pix: sua-chave-pix</p>
+            <img src="seu-qr-code.png" alt="QR Code da loja">
+        </div>
+
+        <a href="javascript:void(0);" class="payment-option">Pagar com Cartão de Débito</a>
+        <center>
+        <div class="payment-info">
+            <p>Insira os detalhes do cartão de débito:</p>
+            <input type="text" placeholder="Número do cartão">
+            <input type="text" placeholder="Data de validade">
+            <input type="text" placeholder="CVV">
+            <button>Pagar</button>
+        </div>
+    </center>
+
+        <a href="javascript:void(0);" class="payment-option">Pagar com Cartão de Crédito</a>
+        <center>
+            <div class="payment-info">
+                <p>Insira os detalhes do cartão de crédito:</p>
+                <input type="text" placeholder="Número do cartão">
+                <input type="text" placeholder="Data de validade">
+                <input type="text" placeholder="CVV">
+                <button>Pagar</button>
+            </div>
+        </center>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const paymentOptions = document.querySelectorAll(".payment-option");
+            const paymentInfo = document.querySelectorAll(".payment-info");
+
+            paymentOptions.forEach((option, index) => {
+                option.addEventListener("click", () => {
+                    paymentInfo[index].classList.toggle("show-info");
+                });
+            });
+        });
+    </script>
 </body>
 
+</html>
