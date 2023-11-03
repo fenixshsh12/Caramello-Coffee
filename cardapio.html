@@ -87,8 +87,13 @@
     .menu-item {
         display: inline-block;
         margin: 50px;
+        flex: 1;
+        padding: 20px;
+        border:1px solid;
     }
-
+.container{
+    display:flex;
+}
     .menu-item img {
         max-width: 100%;
         border-radius: 10px;
@@ -123,7 +128,11 @@
         color: #fff;
         padding: 10px 0;
     }
-
+@media (max-width:768px){
+    .container{
+        flex-direction:column;
+    }
+}
     /* Estilize outros elementos conforme necessário */
 </style>
 <body>
@@ -133,7 +142,8 @@
         <a href="index.html" class="btn">Inicio</a>
     </header>
         <h2>Cardápio</h2>
-        <div class="menu-item">
+        <div class="container">
+            <div class="menu-item">
             <img src="imagens\images.jfif" alt="Café Expresso">
             <h3>Café Expresso</h3>
             <p>Um café encorpado com um sabor intenso.</p>
@@ -169,6 +179,7 @@
             <p>Um brownie rico em chocolate com pedaços de nozes.</p>
             <span class="price item-price">   <input type="checkbox" name="item" value="4.00"> <!-- Adicione valor do item como valor do checkbox -->R$ 4,00</span>
     </div>
+        </div>
         <div id="total">Total: R$ 0.00</div>
      <center>               
              <form>
