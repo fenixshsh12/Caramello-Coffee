@@ -94,7 +94,7 @@
             checkbox.addEventListener("change", updateTotal);
         });
 
-        checkoutButton.addEventListener("click", updateTotal() {
+         checkoutButton.addEventListener("click", function () {
             // Redirecione para a outra página, passando o total como parâmetro
             window.location.href = "compra.html?total=" + totalElement.textContent.replace("Total: R$ ", "");
         });
